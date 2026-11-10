@@ -1,12 +1,16 @@
 {
-  "name": "kikis-math-studio",
-  "version": "0.3.0",
+  "name": "danny-learning-studio",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.mjs",
+    "test": "node photo-tests.mjs && node auth-tests.mjs"
+  },
+  "dependencies": {
+    "heic-to": "1.6.7"
+  },
   "engines": {
     "node": ">=22"
-  },
-  "scripts": {
-    "start": "node server.mjs"
   }
 }

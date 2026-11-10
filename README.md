@@ -1,9 +1,11 @@
-# Kiki’s Math Studio
+# Danny’s Learning Studio — Render edition
 
-IB AA HL question coaching, concept review, and follow-up practice.
+Grade 7 English and Religion tutor with a shared family-code sign-in. Separate source branch `danny-learning-studio`; Caitlin’s service uses `main`.
 
-Run `npm start` with OPENAI_API_KEY and APP_ACCESS_CODE configured as private hosting environment variables. No secrets are included in this repository.
+Build: `npm ci && npm run build`. Start: `npm start`. Tests: `npm test`.
 
-Build: `npm install --omit=dev`. Start: `npm start`.
+Required server environment variables: `APP_ACCESS_CODE` and `OPENAI_API_KEY`. Never put their values in source. Render supplies `PORT` and `RENDER_EXTERNAL_URL`. Server binds to 0.0.0.0. Public readiness route: `/healthz`. Sign-in uses a signed 30-day HttpOnly/Secure/SameSite cookie; login attempts are rate-limited. Changing the family code invalidates previous sessions. Sign out with the studio’s button.
 
-Learning history stays in the visitor’s browser. Use the notebook backup feature before changing devices.
+Photos: up to six pages, HEIC support, automatic resizing, previews and rotation. Photos and notes stay in the browser on the device; they do not sync across devices. The new Render domain has separate storage from the previous ChatGPT Site. Download a learning backup on the previous site, then restore it here to transfer notes and conversations; upload photos again. This migration preserves the earlier site.
+
+Book editions/current chapters await the family’s pages. The tutor has general original reviews, not a complete copy of either textbook.
